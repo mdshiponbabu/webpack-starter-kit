@@ -1,0 +1,35 @@
+// root styles here
+body {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../images/hero.jpg");
+  // background-repeat: no-repeat;
+  //  object-position: center;
+  background-size: cover;
+  
+  
+  color: black;
+}
+
+// Custom Bootstrap styles have been imported here
+@import "custom";
+
+// Theme references have been imported here
+@import "theme";
+
+// All components have been imported here
+@import "components/animations";
+@import "components/buttons";
+@import "components/mixins";
+@import "components/typography";
+
+// All sections have been imported here
+@import "sections/1navbar";
+
+
+// media queries have been imported here
+@import "breakpoints/medium";
+@import "breakpoints/large";
