@@ -1,16 +1,13 @@
-const { sources } = require("webpack");
-const path = require("path");
-
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-// css minification plugin has been included here
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
+const { sources } = require("webpack"); //for webpack
+const path = require("path"); //for path
+const HtmlWebpackPlugin = require("html-webpack-plugin"); //for html
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //for css extract
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin'); //for favicon
 
 module.exports = {
   entry: {
     index: "./src/js/index.js",
+    about: "./src/js/about.js"
   },
 
   output: {
@@ -22,16 +19,32 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
+      // // set title for this page
+      // title: "",
+      // // set filename for this page
+      // filename: "",
+
       template: "./src/index.html",
       inject: "body",
+      chunks: ["index"],
 
-      // for favicon
-      favicon: "./src/icons/favicon.ico"
+      // // it work only for single page website 
+      // favicon: "./src/icons/favicon.ico"
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "./src/about.html",
+      inject: "body",
+      chunks: ["about"],
     }),
 
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css",
     }),
+
+    // The default configuration will automatically generate all needed setup 
+    new FaviconsWebpackPlugin('./src/icons/logo.png') // svg works too!
   ],
 
   module: {
@@ -52,7 +65,7 @@ module.exports = {
         // rules for optimizing photo
         use: [
           {
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               mozjpeg: {
                 progressive: true,
@@ -63,21 +76,20 @@ module.exports = {
                 enabled: false,
               },
               pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
+                quality: [0.65, 0.9],
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
               },
               // the webp option will enable WEBP
               webp: {
-                quality: 75
-              }
-            }
+                quality: 75,
+              },
+            },
           },
         ],
       },
-
 
       {
         test: /\.(s[ac]|c)ss$/i,

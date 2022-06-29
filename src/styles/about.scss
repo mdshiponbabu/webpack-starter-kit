@@ -3,15 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
   //damo style
   body {
-    background-image: url("../images/hero.jpg");
+    background-image: url("../images/about.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
-   
   }
 }
 
@@ -28,8 +27,8 @@
 @import "components/typography";
 
 // media queries have been imported here
-@import "home/breakpoints/medium";
-@import "home/breakpoints/large";
+@import "about/breakpoints/medium";
+@import "about/breakpoints/large";
 
 // All sections have been imported here
-@import "home/sections/1navbar";
+@import "about/sections/1navbar";

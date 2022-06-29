@@ -2,30 +2,27 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/index.js":
+/***/ "./src/js/about.js":
 /*!*************************!*\
-  !*** ./src/js/index.js ***!
+  !*** ./src/js/about.js ***!
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/index.scss */ "./src/styles/index.scss");
+/* harmony import */ var _styles_about_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/about.scss */ "./src/styles/about.scss");
 //importing bootstrap
  //or
 // import 'bootstrap/dist/css/bootstrap.min.css';
 //importing sass file
 
- // damo
 
-var hi = "hi all";
-console.log("hi");
 
 /***/ }),
 
-/***/ "./src/styles/index.scss":
+/***/ "./src/styles/about.scss":
 /*!*******************************!*\
-  !*** ./src/styles/index.scss ***!
+  !*** ./src/styles/about.scss ***!
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -133,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"index": 0
+/******/ 			"about": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -183,9 +180,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors"], () => (__webpack_require__("./src/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors"], () => (__webpack_require__("./src/js/about.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=index.bundle.js.map
+//# sourceMappingURL=about.bundle.js.map
